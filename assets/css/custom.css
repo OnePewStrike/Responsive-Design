@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto Mono';
+  transition: all 0.3s linear;
+  overflow-x: hidden;
+}
+
+/* Global */
+:root {
+  --bg-color: #222327;
+  --text-color: #fff;
+  --dark-color: #000;
+  --main-color: #5E17EB;
+  --body-color: #707070;
+  --hover-color: #737373;
+  --light-color: #fff;
+  --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  --border: .2rem solid rgba(0,0,0,0.1);
+  --outline: .1rem solid rgba(0,0,0,0.1);
+  --outline-hover: .2rem solid rgba(var(--black));
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.75rem;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 2em;
+  background: #fff;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header .logo img {
+  height: 30px;
+  margin-right: 15px;
+}
+
+header .logo h2 {
+  font-size: 2rem;
+  color: var(--dark-color);
+}
+
+header .logo h2:last-child {
+  margin: 0 10px;
+  color: var(--main-color);
+}
+
+header .title {
+  display: flex;
+  align-items: center;
+}
+
+header .nav {
+  display: flex;
+  align-items: center;
+}
+
+header .nav li {
+  margin: 0 20px;
+  font-size: 1.7rem;
+}
+
+header .nav li a {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+header .nav li a:hover {
+  text-decoration: underline;
+}
+
+#menu-btn {
+  color: var(--main-color);
+  font-size: 2rem;
+  display: none;
+}
+
+/* Main Content */
+main {
+  min-height: 85vh;
+  padding: 6% 2em;
+  display: flex;
+  justify-content: center;
+}
+
+main .col-1 {
+  margin-left: 3%;
+  padding: 7em 0;
+  flex: 0 0 44%;
+}
+
+main .col-1 h2{
+  font-size: 2.75rem;
+}
+
+main .col-1 h1 {
+  letter-spacing: 2px;
+  font-size: 4.5rem;
+}
+
+main .col-1 h4 {
+  font-size: 1.75rem;
+  color: var(--main-color);
+}
+
+main .col-1 .description {
+  margin: 20px 0 40px;
+}
+
+main .col-1 .description p {
+  font-size: 1.75rem;
+}
+
+main .col-2 {
+  margin-top: 4em;
+  flex: 0 0 40%;
+}
+
+main .col-2 .godwin {
+  min-height: 550px;
+}
+
+main .col-3 {
+  flex: 0 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .col-3 .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4rem;
+}
+
+main .col-3 .social-links i {
+  color: var(--dark-color);
+}
+
+main .col-3 .social-links i:nth-child(1) {
+  margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 60%;
+  }
+  header {
+    padding: 2em;
+  }
+  #menu-btn {
+    display: block;
+  }
+  header .nav {
+    position: fixed;
+    display: block;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    box-sizing: var(--box-shadow);
+    background-color: var(--main-color);
+  }
+  header .nav.active {
+    right: 0;
+  }
+  header .nav li {
+    padding: 0.2em 1.5em;
+    margin: 10px 0;
+  }
+  header .nav li a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+  }
+}
+
+@media (max-width: 477px) {
+  header {
+    padding: 2em;
+  }
+
+  header .nav {
+    top: 90px;
+  }
+
+  header .logo .title {
+    display: block;
+    margin: 0;
+  }
+
+  header .logo h2:last-child {
+    margin: 0;
+  }
+}

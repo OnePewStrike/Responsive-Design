@@ -1,6 +1,12 @@
-let navBar = document.querySelectorAll('nav');
+// NavBar
+const navBar = document.querySelector(".nav");
+const menu = document.querySelector("#menu-btn")
 
-document.querySelector('#menu-btn').onclick = () => {
+menu.onclick = () => {
   navBar.classList.toggle('active');
 }
 
+
+window.onscroll = () => {
+  navBar.classList.remove('active');
+}

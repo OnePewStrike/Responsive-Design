@@ -3,10 +3,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
   list-style: none;
   font-family: 'Roboto Mono';
-  /* transition: all 0.3s linear; */
+  transition: all 0.3s linear;
   overflow-x: hidden;
 }
 
@@ -27,6 +28,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .btn {
@@ -118,6 +120,7 @@ header .nav li a:hover {
   color: var(--main-color);
   font-size: 2rem;
   display: none;
+  cursor: pointer;
 }
 
 /* Main Content */
@@ -200,9 +203,10 @@ main .col-3 {
 
 /* About */
 .about {
+  width: 100%;
   background-color: var(--dark-color);
   color: var(--light-color);
-  padding: 4% 5%;
+  padding: 5em 7em;
   display: flex;
 }
 
@@ -257,7 +261,7 @@ main .col-3 {
 footer {
   background-color: var(--dark-color);
   color: var(--text-color);
-  padding: 4% 5.5% 4% 5.5%;
+  padding: 5em 8.5em;
 }
 
 footer .row {
@@ -313,14 +317,14 @@ footer .row .col-3 p{
 .hobbies {
   min-height: 65vh;
   background-color: var(--dark-color);
-  padding: 2em 2%;
+  padding: 6em 4em 0 4em;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
 }
 
 .hobbies .group {
-  margin: 2em 5em;
+  margin: 4em;
 }
 
 .hobbies .group .title {
@@ -338,7 +342,6 @@ footer .row .col-3 p{
 .hobbies .row .content-col {
   flex: 0 0 33%;
   display: flex;
-  align-items: center;
 }
 
 .hobbies .row .content-col .icon {
@@ -368,7 +371,7 @@ footer .row .col-3 p{
   }
   /* Header */
   header {
-    padding: 2em;
+    padding: 2em 3em;
   }
   #menu-btn {
     display: block;
@@ -384,6 +387,7 @@ footer .row .col-3 p{
   }
   header .nav.active {
     right: 0;
+    transition: .4s linear;
   }
   header .nav li {
     padding: 0.2em 1.5em;
@@ -409,6 +413,7 @@ footer .row .col-3 p{
   }
   /* About Content */
   .about {
+    padding: 3em 0 0 2.6em;
     display: flex;
     flex-direction: column;
   }
@@ -424,7 +429,7 @@ footer .row .col-3 p{
   }
   /* Footer */
   footer {
-    padding: 3em 0 3em 10%;
+    padding: 3em 0 0 6em;
   }
   footer .row {
     display: flex;
@@ -439,10 +444,11 @@ footer .row .col-3 p{
   }
   footer .row .col-3 {
     flex: 0 0 100%;
+    margin-bottom: 3em;
   }
   /* Hobbies */
   .hobbies {
-    padding: 8% 0;
+    padding: 2em 2.125em;
   }
   .hobbies .group .row {
     display: flex;

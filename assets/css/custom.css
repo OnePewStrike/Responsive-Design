@@ -148,6 +148,10 @@ main .col-1 h1 {
   font-size: 4.5rem;
 }
 
+main .col-1 h1 span {
+  color: var(--main-color);
+}
+
 main .col-1 h4 {
   margin: 0.2em 0;
   font-size: 1.75rem;
@@ -188,7 +192,7 @@ main .col-2 {
 main .col-2 .godwin {
   max-width: 100%;
   min-height: 550px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 main .col-3 {
@@ -413,7 +417,7 @@ footer .row .col-3 p{
   }
   /* About Content */
   .about {
-    padding: 3em 0 0 2.6em;
+    padding: 3em 0 0 3.7em;
     display: flex;
     flex-direction: column;
   }
@@ -429,7 +433,7 @@ footer .row .col-3 p{
   }
   /* Footer */
   footer {
-    padding: 3em 0 0 6em;
+    padding: 3em 0 0 7em;
   }
   footer .row {
     display: flex;

@@ -51,8 +51,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2em 2em;
+  padding: 2em 4em;
   background: #fff;
+  box-shadow: var(--box-shadow);
 }
 
 header .logo {
@@ -108,16 +109,17 @@ header .nav li a:hover {
 
 /* Main Content */
 main {
-  min-height: 85vh;
-  padding: 6% 2em;
+  position: relative;
+  min-height: 80vh;
+  padding: 6% 0;
   display: flex;
   justify-content: center;
 }
 
 main .col-1 {
   margin-left: 3%;
-  padding: 7em 0;
-  flex: 0 0 44%;
+  padding: 7em 2.5em 0 0;
+  flex: 0 0 45%;
 }
 
 main .col-1 h2{
@@ -125,57 +127,81 @@ main .col-1 h2{
 }
 
 main .col-1 h1 {
+  margin: 0.4em 0;
   letter-spacing: 2px;
   font-size: 4.5rem;
 }
 
 main .col-1 h4 {
+  margin: 0.2em 0;
   font-size: 1.75rem;
+  font-weight: 500;
   color: var(--main-color);
 }
 
 main .col-1 .description {
-  margin: 20px 0 40px;
+  margin: 3em 0 4em;
 }
 
 main .col-1 .description p {
   font-size: 1.75rem;
+  line-height: 32px;
+}
+
+main .col-1 button {
+  margin-top: 0.2em;
+}
+
+main .col-1 .social-links {
+  margin-top: 2em;
+  font-size: 4rem;
+}
+
+main .col-1 .social-links i {
+  color: var(--main-color);
 }
 
 main .col-2 {
-  margin-top: 4em;
-  flex: 0 0 40%;
-}
-
-main .col-2 .godwin {
-  min-height: 550px;
-}
-
-main .col-3 {
-  flex: 0 0 5%;
+  flex: 0 0 45%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-main .col-3 .social-links {
+main .col-2 .godwin {
+  max-width: 100%;
+  min-height: 600px;
+  object-fit: contain;
+}
+
+main .col-3 {
+  background: transparent;
+  position: absolute;
+  right: 1%;
+  top: 35%;   
   display: flex;
-  flex-direction: column;
   align-items: center;
-  font-size: 4rem;
+  justify-content: center;
 }
 
-main .col-3 .social-links i {
-  color: var(--dark-color);
-}
-
-main .col-3 .social-links i:nth-child(1) {
-  margin: 10px 0;
-}
-
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   html {
     font-size: 60%;
+  }
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  main .col-1 {
+    flex: 0 0 100%;
+    padding: 5em 5em 2em 3em;
+  }
+  main .col-1 .godwin {
+  }
+  main .col-2 {
+    flex: 0 0 100%;
+    padding: 0 2em;
   }
   header {
     padding: 2em;
@@ -186,8 +212,8 @@ main .col-3 .social-links i:nth-child(1) {
   header .nav {
     position: fixed;
     display: block;
-    top: 70px;
-    right: 0;
+    top: 65px;
+    right: -110%;
     width: 100%;
     box-sizing: var(--box-shadow);
     background-color: var(--main-color);
